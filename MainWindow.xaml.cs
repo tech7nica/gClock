@@ -40,11 +40,13 @@ namespace gClock
             if (clockWhite)
             {
                 clock.Foreground = new SolidColorBrush(Colors.Black);
+                calender.Foreground = new SolidColorBrush(Colors.Black);
                 clockWhite = false;
             }
             else
             {
                 clock.Foreground = new SolidColorBrush(Colors.White);
+                calender.Foreground = new SolidColorBrush(Colors.White);
                 clockWhite = true;
             }
         }
@@ -60,6 +62,7 @@ namespace gClock
             // タイマーイベントの定義
             t.Tick += (sender, e) => {
                 clock.Text = DateTime.Now.ToString("HH:mm:ss");
+                calender.Text = DateTime.Now.ToString("yyyy/MM/dd(ddd)");
             };
 
             // 生成したタイマーを返す

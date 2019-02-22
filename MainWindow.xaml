@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:gClock"
         mc:Ignorable="d"
-        Title="MainWindow" Height="100" Width="300"
+        Title="MainWindow" Height="150" Width="300"
         Background="#FF00FF00"
         BorderBrush="#FF14A9FF"
         BorderThickness="0"
@@ -16,19 +16,28 @@
     </WindowChrome.WindowChrome>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="9*"/>
             <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
         <!--Labelを消す-->
         <!--<Label Content="Hello .NET Core!" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="40"/>-->
-        <Viewbox>
+        <Viewbox Grid.Row="0">
+            <TextBlock  x:Name="calender"
+                Text="0000/00/00(　)"
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center" 
+                MouseDown="Clock_MouseDown"
+                Foreground="White"
+                />
+        </Viewbox>
+        <Viewbox Grid.Row="1">
             <TextBlock  x:Name="clock"
-                        Text="00:00:00"
-                        HorizontalAlignment="Center" 
-                        VerticalAlignment="Center" 
-                        MouseDown="Clock_MouseDown"
-                        Foreground="White"
-                        />
+                Text="00:00:00"
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center" 
+                MouseDown="Clock_MouseDown"
+                Foreground="White"
+                />
         </Viewbox>
     </Grid>
 </Window>
