@@ -22,11 +22,15 @@ namespace gClock
     /// </summary>
     public partial class MainWindow : Window
     {
+        private ClockViewModel clockView;
         private DispatcherTimer timer;
         private bool clockWhite;        
         public MainWindow()
         {
             InitializeComponent();
+            // データバインディングを初期化
+            clockView = new ClockViewModel();
+            this.DataContext = clockView;
             // 色判定の初期化
             clockWhite = true;
             // タイマー生成
@@ -61,8 +65,8 @@ namespace gClock
 
             // タイマーイベントの定義
             t.Tick += (sender, e) => {
-                clock.Text = DateTime.Now.ToString("HH:mm:ss");
-                calender.Text = DateTime.Now.ToString("yyyy/MM/dd(ddd)");
+                clockView.ClockText = DateTime.Now.ToString("HH:mm:ss");
+                clockView.CalenderText = DateTime.Now.ToString("yyyy/MM/dd(ddd)");
             };
 
             // 生成したタイマーを返す

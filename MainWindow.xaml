@@ -23,7 +23,7 @@
         <!--<Label Content="Hello .NET Core!" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="40"/>-->
         <Viewbox Grid.Row="0">
             <TextBlock  x:Name="calender"
-                Text="0000/00/00(　)"
+                Text="{Binding Path=CalenderText}"
                 HorizontalAlignment="Center" 
                 VerticalAlignment="Center" 
                 MouseDown="Clock_MouseDown"
@@ -32,7 +32,7 @@
         </Viewbox>
         <Viewbox Grid.Row="1">
             <TextBlock  x:Name="clock"
-                Text="00:00:00"
+                Text="{Binding Path=ClockText}"
                 HorizontalAlignment="Center" 
                 VerticalAlignment="Center" 
                 MouseDown="Clock_MouseDown"
