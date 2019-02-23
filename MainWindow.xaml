@@ -22,6 +22,7 @@
         <Viewbox Grid.Row="0">
             <TextBlock  x:Name="calender"
                 Text="{Binding Path=CalenderText}"
+                FontFamily="Migu 1P"
                 HorizontalAlignment="Center" 
                 VerticalAlignment="Center" 
                 MouseDown="Clock_MouseDown"
@@ -31,6 +32,7 @@
         <Viewbox Grid.Row="1">
             <TextBlock  x:Name="clock"
                 Text="{Binding Path=ClockText}"
+                FontFamily="Migu 1P"
                 HorizontalAlignment="Center" 
                 VerticalAlignment="Center" 
                 MouseDown="Clock_MouseDown"
