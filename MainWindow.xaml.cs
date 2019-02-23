@@ -43,14 +43,14 @@ namespace gClock
             //Application.Current.Shutdown();
             if (clockWhite)
             {
-                clock.Foreground = new SolidColorBrush(Colors.Black);
-                calender.Foreground = new SolidColorBrush(Colors.Black);
+                clockView.ClockColor = new SolidColorBrush(Colors.Black);
+                clockView.CalenderColor = new SolidColorBrush(Colors.Black);
                 clockWhite = false;
             }
             else
             {
-                clock.Foreground = new SolidColorBrush(Colors.White);
-                calender.Foreground = new SolidColorBrush(Colors.White);
+                clockView.ClockColor = new SolidColorBrush(Colors.White);
+                clockView.CalenderColor = new SolidColorBrush(Colors.White);
                 clockWhite = true;
             }
         }
